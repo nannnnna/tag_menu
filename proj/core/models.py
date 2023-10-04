@@ -4,7 +4,7 @@ from mptt.models import MPTTModel, TreeForeignKey
 
 class MenuItem(MPTTModel):
     name = models.CharField(max_length=100, unique=True)
-    url = models.CharField('Ссылка', max_length=255)
+    url = models.URLField('Ссылка', max_length=255)
     position = models.PositiveIntegerField('Позиция', default=1)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
 
