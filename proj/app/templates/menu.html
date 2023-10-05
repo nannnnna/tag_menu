@@ -1,5 +1,48 @@
-<ul class="menu">
-    {% for m_item in menu_items %}
-        <li><a href="{{ m_item.url }}">{{ m_item.name }}</a></li>
-    {% endfor %}
-    </ul>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Логотип</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Главная</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/a">О компании</a>
+                </li>
+                <!-- Другие элементы меню можно добавить здесь -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>О компании</h1>
+        <p>Компания XYZ была основана в 2000 году и с тех пор является лидером в области производства и продажи продукции.</p>
+        <p>Мы предлагаем высококачественные товары и услуги, наша команда специалистов постоянно совершенствует свои навыки, чтобы удовлетворять потребности клиентов.</p>
+        <p>Благодаря профессиональному подходу и инновационным технологиям, мы завоевали доверие и признание среди наших клиентов.</p>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">© 2023 Компания XYZ</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

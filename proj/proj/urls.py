@@ -22,7 +22,7 @@ from core.views import core_menu_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('base/', base_view, name='base'),
+    path('', base_view, name='base'),
     path('menu/', menu_view, name='menu'),
     path('core_menu/', core_menu_view, name='core_menu'),
 ]
