@@ -13,18 +13,18 @@
 
                     {% if menu_item.get_children %}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/{{ menu_item.url }}/" id="dropdown03"
+                            <a class="nav-link dropdown-toggle" href="{% if menu_item.url == "/" %}{{ menu_item.url }}{% else %}/{{ menu_item.url }}/{% endif %}" id="dropdown03"
                                data-bs-toggle="dropdown" aria-expanded="false">{{ menu_item }}</a>
 
                             <ul class="dropdown-menu" aria-labelledby="dropdown03">
                                 {% for m_item in menu_item.get_children %}
-                                    <li><a class="dropdown-item" href="/{{ m_item.url }}/">{{ m_item }}</a></li>
+                                    <li><a class="dropdown-item" href="{% if m_item.url == "/" %}{{ m_item.url }}{% else %}/{{ m_item.url }}/{% endif %}">{{ m_item }}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/{{ menu_item.url }}/">{{ menu_item }}</a>
+                            <a class="nav-link" aria-current="page" href="{% if menu_item.url == "/" %}{{ menu_item.url }}{% else %}/{{ menu_item.url }}/{% endif %}">{{ menu_item }}</a>
                         </li>
                     {% endif %}
 
